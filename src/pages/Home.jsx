@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../layouts/Nav";
 import "../css/style.css";
 import { useSpring, animated } from "react-spring";
+import isaac from "../assets/isaac.png";
 
 function Num({ n }) {
   const props = useSpring({
@@ -41,7 +42,8 @@ function Home() {
               height: "300px",
             }}
           >
-            <h1>Image Here</h1>
+            {/* <h1>Image Here</h1> */}
+            <img src={isaac} alt="no photo" />
           </div>
         </div>
         <div className="box home_footer">

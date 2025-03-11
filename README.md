@@ -1,8 +1,7 @@
 ## Portfolio
 Hey i am Isaac Warui this is my portfolio showcasing all my skill set and personal projects.
 
-Screenshot of the home page
-![home page](public/home.png)
+![home page](public/assets/home.png)
 
 
 ## react-spring 

@@ -21,7 +21,7 @@ function Home() {
       <Nav />
       <div className="container">
         <div className="box">
-          <div style={{}}>
+          <div className="left">
             <p className="" style={{ fontSize: "30px" }}>
               Hello, I`m
             </p>
@@ -33,7 +33,7 @@ function Home() {
             </p>
           </div>
           <div
-            className=""
+            className="right"
             style={{
               display: "flex",
               justifyContent: "center",

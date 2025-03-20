@@ -1,8 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import "../css/nav.css";
 
 function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <nav className="nav-container">
       <ul className="nav-list">
@@ -13,16 +18,18 @@ function Nav() {
           </Link>
         </li>
 
+
         {/* Right Side (Navigation Links) */}
-        <div className="nav-links">
+        <div className={menuOpen ? "nav-links active" : "nav-links"}>
           <li>
             <Link
               to="#"
               className="nav-link"
               onClick={() => {
                 const link = document.createElement("a");
+                link.target = "_blank";
                 link.href =
-                  "https://drive.google.com/file/d/1jUCJTeRzvFbLRehUhlY38yFUTknmsx_N/view?usp=sharing";
+                  "https://drive.google.com/file/d/1Fk-2HPx9KWGcmZX_PYP7wm7lKYIGzOSa/view?usp=sharing";
                 link.click();
               }}
             >
@@ -46,6 +53,10 @@ function Nav() {
           </li>
         </div>
       </ul>
+        {/* Mobile Menu Button */}
+        <button className="menu-button" onClick={toggleMenu}>
+          {menuOpen ? "✕" : "☰"}
+        </button>
     </nav>
   );
 }

@@ -18,9 +18,23 @@ function Nav() {
           </Link>
         </li>
 
+        {/* Mobile Menu Button - Outside the sidebar */}
+        <button className="menu-button" onClick={toggleMenu}>
+          {menuOpen ? "✕" : "☰"}
+        </button>
 
         {/* Right Side (Navigation Links) */}
         <div className={menuOpen ? "nav-links active" : "nav-links"}>
+          {/* Logo and Close Button for Mobile */}
+          <div className="mobile-header">
+            <Link to="/" className="nav-logo">
+              Isaac.
+            </Link>
+            <button className="close-button" onClick={toggleMenu}>
+              ✕
+            </button>
+          </div>
+          
           <li>
             <Link
               to="#"
@@ -38,7 +52,7 @@ function Nav() {
           </li>
           <li>
             <Link to="/experiance" className="nav-link">
-              Eductaion
+              Education
             </Link>
           </li>
           <li>
@@ -53,10 +67,6 @@ function Nav() {
           </li>
         </div>
       </ul>
-        {/* Mobile Menu Button */}
-        <button className="menu-button" onClick={toggleMenu}>
-          {menuOpen ? "✕" : "☰"}
-        </button>
     </nav>
   );
 }

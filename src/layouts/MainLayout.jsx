@@ -15,7 +15,7 @@ export default function MainLayout({ children }) {
   }, [isDark]);
 
   const navLinks = [
-    { path: '/', label: 'Home' },
+    // { path: '/', label: 'Home' },
     { path: '/experiance', label: 'Experience' },
     { path: '/projects', label: 'Projects' },
     { path: '/certifications', label: 'Certifications' },

@@ -1,5 +1,5 @@
-import React from 'react'
-import Nav from '../layouts/Nav'
+import React from "react";
+import Nav from "../layouts/Nav";
 
 const certifications = [
   {
@@ -9,6 +9,7 @@ const certifications = [
     date: "2024",
     description: "Comprehensive certification in modern web development technologies and practices.",
     skills: ["Js", "React", "Node.js", "MongoDB", "Express"],
+    link: "https://drive.google.com/file/d/1g5dhNjA9nfx7OeztRr5KcbopAakiwV4S/view?usp=sharing"
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const certifications = [
     date: "2025",
     description: "Foundational understanding of AWS Cloud services and architecture.",
     skills: ["AWS", "Cloud Computing", "DevOps"],
+    link: "https://www.credly.com/badges/a26937ef-0f5b-4dd6-ac26-7143f0c88929/linked_in_profile"
   },
   {
     id: 3,
@@ -25,8 +27,10 @@ const certifications = [
     date: "2023",
     description: "Certification in PHP PDO.",
     skills: ["PHP", "PDO", "MySQL"],
+    link: "https://udemy-certificate.s3.amazonaws.com/image/UC-4ec331ee-1558-4d2d-9cc2-853a57437549.jpg"
   },
 ];
+
 
 export default function Certifications() {
   return (
@@ -37,41 +41,50 @@ export default function Certifications() {
           Certifications
         </h1>
         <p className="text-lg text-secondary dark:text-light/80 max-w-2xl mx-auto">
-          Professional certifications and achievements that demonstrate my expertise and commitment to continuous learning.
+          Professional certifications and achievements that demonstrate my
+          expertise and commitment to continuous learning.
         </p>
       </div>
 
       {/* Certifications Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {certifications.map((cert) => (
-          <div key={cert.id} className="card hover:shadow-lg transition-shadow">
-            <div className="flex items-center justify-between mb-4">
-              <div>
-                <h3 className="text-xl font-bold text-dark dark:text-light">
-                  {cert.title}
-                </h3>
-                <p className="text-accent">{cert.issuer}</p>
-              </div>
-              <span className="text-sm text-secondary dark:text-light/60">
-                {cert.date}
-              </span>
-            </div>
-
-            <p className="text-secondary dark:text-light/80 mb-4">
-              {cert.description}
-            </p>
-
-            <div className="flex flex-wrap gap-2">
-              {cert.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1 text-sm rounded-full bg-accent/10 text-accent"
-                >
-                  {skill}
+          <a
+            key={cert.id}
+            href={cert.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+          >
+            <div className="card p-6 h-full">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-bold text-dark dark:text-light">
+                    {cert.title}
+                  </h3>
+                  <p className="text-accent">{cert.issuer}</p>
+                </div>
+                <span className="text-sm text-secondary dark:text-light/60">
+                  {cert.date}
                 </span>
-              ))}
+              </div>
+
+              <p className="text-secondary dark:text-light/80 mb-4">
+                {cert.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {cert.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 text-sm rounded-full bg-accent/10 text-accent"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
 

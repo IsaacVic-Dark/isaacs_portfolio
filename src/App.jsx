@@ -1,4 +1,5 @@
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
 
 // import "./App.css";
 import Home from "./pages/Home";
@@ -13,8 +14,8 @@ import CarProj from "./pages/CarProj";
 
 function App() {
   return (
-    <>
-      <Router>
+    <Router>
+      <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/experiance" element={<Exp />} />
@@ -26,8 +27,8 @@ function App() {
           <Route path="/noteproj" element={<NoteProj />} />
           <Route path="/car" element={<CarProj />} />
         </Routes>
-      </Router>
-    </>
+      </MainLayout>
+    </Router>
   );
 }
 

@@ -6,28 +6,35 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     id: 1,
-    title: "Task Tracker",
-    description: "A React-based task management application with CRUD operations",
+    title: "Kenya Tax Calculator",
+    url: "/src/assets/ketaxdesktop.png",
+    description:
+      "Calculates monthly income tax based on Kenya's progressive KRA tax system.",
     path: "/tcproj",
-    tech: ["React", "Node.js", "MongoDB"],
+    tech: ["HTML", "CSS3", "PHP"],
   },
   {
     id: 2,
     title: "Playground Games",
-    description: "Interactive gaming platform built with modern web technologies",
+    url: "",
+    description:
+      "Interactive gaming platform built with modern web technologies",
     path: "/playG",
     tech: ["JavaScript", "HTML5", "CSS3"],
   },
   {
     id: 3,
-    title: "Chat Application",
-    description: "Real-time chat application with WebSocket integration",
+    title: "Payroll Management System",
+    url: "",
+    description:
+      "A comprehensive solution for handling employee payroll processes.",
     path: "/chatproj",
-    tech: ["React", "Socket.io", "Express"],
+    tech: ["TailwindCSS", "MySQL", "PHP"],
   },
   {
     id: 4,
     title: "Note Taking App",
+    url: "",
     description: "Simple and elegant note-taking application",
     path: "/noteproj",
     tech: ["React", "LocalStorage", "Markdown"],
@@ -35,6 +42,7 @@ const projects = [
   {
     id: 5,
     title: "Car Rental System",
+    url: "",
     description: "Full-stack car rental management system",
     path: "/car",
     tech: ["React", "Node.js", "PostgreSQL"],
@@ -52,7 +60,8 @@ export default function Projects() {
             My Projects
           </h1>
           <p className="text-lg text-secondary dark:text-light/80 max-w-2xl mx-auto">
-            Here are some of the projects I've worked on. Each project demonstrates different skills and technologies.
+            Here are some of the projects I've worked on. Each project
+            demonstrates different skills and technologies.
           </p>
         </div>
 
@@ -65,7 +74,12 @@ export default function Projects() {
               className="card group hover:shadow-xl"
             >
               <div className="h-48 bg-accent/10 rounded-lg mb-4 flex items-center justify-center">
-                <span className="text-4xl">🚀</span>
+                {/* <span className="text-4xl">🚀</span> */}
+                <img
+                  src={project.url}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-bold text-dark dark:text-light mb-2">
                 {project.title}

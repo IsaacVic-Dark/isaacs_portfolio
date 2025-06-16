@@ -6,9 +6,9 @@ const experiences = [
   {
     id: 1,
     title: "PHP Developer",
-    company: "Redian Softwar Ltd",
+    company: "Redian Software Ltd",
     period: "2025 - Present",
-    description: "Customize and enhance SuiteeCRM solutions to meet customer-specific requireements esing PHP, optimzing workflows nd improving CRM functionality.",
+    description: "Customize and enhance SuiteCRM solutions to meet customer-specific requirements using PHP, optimzing workflows and improving CRM functionality.",
     skills: ["Angular", "PHP", "MySQL", "Git"],
   },
   {

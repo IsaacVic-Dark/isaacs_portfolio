@@ -48,7 +48,7 @@ export default function MainLayout({ children }) {
               ))}
               {/* CV Download Link */}
               <a
-                href="https://drive.google.com/file/d/1Fk-2HPx9KWGcmZX_PYP7wm7lKYIGzOSa/view?usp=sharing"
+                href="https://drive.google.com/uc?export=download&id=1WWF1wDzHiC-OFLOyCkNp1GzowhNvL6wz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-dark dark:text-light hover:text-accent dark:hover:text-accent transition-colors duration-200"
